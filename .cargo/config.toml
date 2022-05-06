@@ -1,0 +1,6 @@
+[unstable]
+build-std-features = ["compiler-builtins-mem"] # enables functions like `memcpy` and `memset` in compiler_builtins 
+build-std = ["core", "compiler_builtins"] # recompiles `core` and `compiler_builtins` for our target-triple
+
+[build]
+target = "target-spec.json" # tells cargo to always build from our target specification
